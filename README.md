@@ -35,6 +35,13 @@ CMD ["npm", "start"]
 
 ```
 
+## now run this in bash or terminal
+```bash
+docker build -t my_node_app:1.0 .
+```
+
+# if using docker compose then
+
 ## Docker yaml file to run multiple services 
 ```bash
 version: "3.8"
@@ -52,8 +59,8 @@ services:
       - .env
 ```
 
-## now run this in bash or terminal
 
+## now run this in bash or terminal
 ```bash
-docker build -t my_node_app:1.0 .
+docker compose up --build
 ```

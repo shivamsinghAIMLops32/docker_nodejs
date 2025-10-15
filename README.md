@@ -35,6 +35,23 @@ CMD ["npm", "start"]
 
 ```
 
+## Docker yaml file to run multiple services 
+```bash
+version: "3.8"
+
+services:
+  web:
+    build: .
+    container_name: my_node_container
+    image: my_node_image
+    ports:
+      - "3000:3000"
+    expose:
+      - 3000
+    env_file:
+      - .env
+```
+
 ## now run this in bash or terminal
 
 ```bash

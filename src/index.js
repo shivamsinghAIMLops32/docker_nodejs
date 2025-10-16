@@ -16,5 +16,5 @@ app.get("/health", (req, res) => {
 });
 
 app.listen(PORT, HOST, () => {
-  console.log(`Server is running on http://${HOST}:${PORT}`);
+  console.log(`Server is running on http://${HOST}:${PORT}`); // nothing
 });

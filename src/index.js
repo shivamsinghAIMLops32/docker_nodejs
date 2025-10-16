@@ -5,11 +5,11 @@ config();
 const PORT = Number(process.env.PORT) || 3000;
 const HOST = process.env.HOST || "0.0.0.0";
 
-app.get("/", (req, res) => {
+app.get("/api/", (req, res) => {
   res.send("Hello World!");
 });
-app.get("/ready", (req, res) => {
-  res.send("OK ready");  // so nginx will call this endpoint as http://localhost/api/ready
+app.get("/api/ready", (req, res) => {
+  res.send("OK ready");  // so nginx will call this endpoint as http://localhost/path
 });
 app.get("/health", (req, res) => { 
   res.send("OK health");

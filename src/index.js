@@ -8,7 +8,10 @@ const HOST = process.env.HOST || "0.0.0.0";
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
-app.get("/health", (req, res) => {
+app.get("/ready", (req, res) => {
+  res.send("OK ready");  // so nginx will call this endpoint as http://localhost/api/ready
+});
+app.get("/health", (req, res) => { 
   res.send("OK health");
 });
 
